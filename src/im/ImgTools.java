@@ -15,7 +15,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author David Rosenbusch
  *
  */
-public class Start {
+public class ImgTools {
 	// is
 	// to
 	// just

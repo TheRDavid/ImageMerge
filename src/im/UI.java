@@ -105,7 +105,7 @@ public class UI extends JFrame {
 					JOptionPane.showMessageDialog(UI.this, "Needs 2 Images");
 					return;
 				}
-				midImage = Start.merge(leftImage, rightImage);
+				midImage = ImgTools.merge(leftImage, rightImage);
 				midIcon.setIcon(new ImageIcon(midImage.getScaledInstance(640,
 						(int) (midImage.getHeight() / ((double) midImage.getWidth() / 640)), Image.SCALE_DEFAULT)));
 				midIcon.repaint();
@@ -120,7 +120,7 @@ public class UI extends JFrame {
 					JOptionPane.showMessageDialog(UI.this, "No Source");
 					return;
 				}
-				BufferedImage[] recs = Start.split(midImage);
+				BufferedImage[] recs = ImgTools.split(midImage);
 
 				rightImage = recs[1];
 				rightIcon.setIcon(new ImageIcon(rightImage.getScaledInstance(640,
@@ -186,7 +186,7 @@ public class UI extends JFrame {
 							Image.SCALE_DEFAULT)));
 					rightIcon.repaint();
 
-					midImage = Start.merge(rightImage, leftImage);
+					midImage = ImgTools.merge(rightImage, leftImage);
 					midIcon.setIcon(new ImageIcon(midImage.getScaledInstance(640,
 							(int) (midImage.getHeight() / ((double) midImage.getWidth() / 640)), Image.SCALE_DEFAULT)));
 					midIcon.repaint();
@@ -217,7 +217,7 @@ public class UI extends JFrame {
 							Image.SCALE_DEFAULT)));
 					leftIcon.repaint();
 
-					midImage = Start.merge(rightImage, leftImage);
+					midImage = ImgTools.merge(rightImage, leftImage);
 					midIcon.setIcon(new ImageIcon(midImage.getScaledInstance(640,
 							(int) (midImage.getHeight() / ((double) midImage.getWidth() / 640)), Image.SCALE_DEFAULT)));
 					midIcon.repaint();
@@ -267,7 +267,7 @@ public class UI extends JFrame {
 		setSize(1920, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationByPlatform(true);
-		setTitle("HI");
+		setTitle("ImageMerge");
 		setVisible(true);
 	}
 
