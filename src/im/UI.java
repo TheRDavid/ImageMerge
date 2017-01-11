@@ -34,9 +34,11 @@ public class UI extends JFrame {
 	private JLabel leftIcon = new JLabel() {
 		@Override
 		protected void paintComponent(java.awt.Graphics g) {
+			g.setColor(Color.DARK_GRAY);
+			g.fillRect(0, 0, getWidth(), getHeight());
 			super.paintComponent(g);
 			if (leftImage == null) {
-				g.setColor(Color.BLUE);
+				g.setColor(Color.LIGHT_GRAY);
 				g.setFont(uiFont);
 				String txt = "Drag image that should be merged";
 				int wdth = g.getFontMetrics().stringWidth(txt);
@@ -46,9 +48,11 @@ public class UI extends JFrame {
 	}, rightIcon = new JLabel() {
 		@Override
 		protected void paintComponent(java.awt.Graphics g) {
+			g.setColor(Color.DARK_GRAY);
+			g.fillRect(0, 0, getWidth(), getHeight());
 			super.paintComponent(g);
 			if (rightImage == null) {
-				g.setColor(Color.BLUE);
+				g.setColor(Color.LIGHT_GRAY);
 				g.setFont(uiFont);
 				String txt = "Drag image that should be merged";
 				int wdth = g.getFontMetrics().stringWidth(txt);
@@ -58,9 +62,11 @@ public class UI extends JFrame {
 	}, midIcon = new JLabel() {
 		@Override
 		protected void paintComponent(java.awt.Graphics g) {
+			g.setColor(Color.DARK_GRAY);
+			g.fillRect(0, 0, getWidth(), getHeight());
 			super.paintComponent(g);
 			if (midImage == null) {
-				g.setColor(Color.BLUE);
+				g.setColor(Color.LIGHT_GRAY);
 				g.setFont(uiFont);
 				String txt = "Drag image for reconstruction";
 				int wdth = g.getFontMetrics().stringWidth(txt);
@@ -255,6 +261,12 @@ public class UI extends JFrame {
 
 			}
 		});
+		mid.setBackground(Color.DARK_GRAY);
+		left.setBackground(Color.DARK_GRAY);
+		right.setBackground(Color.DARK_GRAY);
+		setBackground(Color.DARK_GRAY);
+		getContentPane().setBackground(Color.DARK_GRAY);
+		controls.setBackground(Color.DARK_GRAY);
 		add(left, BorderLayout.WEST);
 		add(mid, BorderLayout.CENTER);
 		add(right, BorderLayout.EAST);
